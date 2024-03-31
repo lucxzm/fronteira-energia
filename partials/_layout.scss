@@ -1,0 +1,258 @@
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 8px
+}
+
+// BG HOME
+
+.bg-home{
+    position: relative;
+}
+
+.bg-home::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #06121e), url("../assets/fundologo.jpeg");
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    opacity: 0.5;
+}
+
+//--------------------------
+
+// HERO -----------------
+
+.hero{
+    color: $white-dark;
+    min-height: 10vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+
+    h1{
+        text-align: center;
+        line-height: 150%;
+        max-width: 940px;
+        font-size: 46px;
+    }
+}
+
+.button-contact{
+    padding: 14px 28px;
+    color: $white-light;
+    background-color: $orange-dark;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 14px 0;
+}
+
+.button-contact:hover{
+    animation: scaleButton 0.8s alternate infinite;
+}
+
+@keyframes scaleButton {
+    from{
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.07);
+    }
+}
+
+@media  screen and (max-width: 768px) {
+    .hero{
+        min-height: 0vh;
+
+        h1{
+            font-size: 34px;
+            padding: 0 14px;
+            width: 100%;
+        }
+
+        p{
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    .hero h1{
+        font-size: 24px;
+    }
+}
+
+//---------------
+
+// About-------------
+.about{
+    background-color: $primary-normal;
+    overflow: hidden;
+    color: $white-normal;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 34px 14px 64px 14px;
+    margin-top: 300px;
+
+    img{
+        max-width: 570px;
+    }
+}
+
+.about-content div{
+    flex:1;
+}
+
+.about-description{
+    h2{
+        font-size: 38px;
+        margin-bottom: 24px;
+    }
+
+    p{
+        margin-bottom: 14px;
+        line-height: 150%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-content{
+        flex-direction: column;
+        margin-top: -10px;
+    }    
+
+    .about-description{
+        margin-top: 30px;
+    }
+
+    .about-description h2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-description p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+//------------------
+
+// Services--------
+
+.services{
+    background-color: $white-dark;
+    color: $black-dark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 14px;
+    
+}
+
+.services-content h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+
+.images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 20px 5px 20px;
+}
+
+.image{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: $white-dark;
+    border-radius: 8px;
+    box-shadow: 0px -1px 17px -4px rgba(0,0,0, 0.45);
+
+    overflow: hidden;
+
+    img{
+        width: 100%;
+        max-width: 500px;
+        transition: transform 0.2s;
+    }
+}
+
+.image img:hover{
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .services{
+        margin-top: 60px;
+    }
+    .images{
+        flex-direction: column;
+
+    }
+
+    .image img{
+        max-width: 740px;
+    }
+}
+
+.image:target{
+    position: fixed;
+    width: 50%;
+    top: 15px;
+    left: 25%;
+}
+//----------------------
+
+// Footer
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 54px 0;
+    color: $white-dark;
+}
+
+@media screen and (max-width: 768px) {
+    .footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .footer{
+        p{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 40px;
+        }
+    }
+}
